@@ -17,7 +17,7 @@ leftNav.appendChild(logoLink);
 const menuItemsData = [
   { enText: "About", faText: "درباره من" },
   { enText: "Twitch", faText: "توییچ" },
-  { enText: "Youtube", faText: "یوتیوب" },
+  { enText: "YouTube", faText: "یوتیوب" },
   { enText: "Social Media", faText: "شبکه های مجازی" },
   { enText: "Support", faText: "حمایت" },
 ];
@@ -43,7 +43,7 @@ leftNav.appendChild(mainMenu);
 const menuItemsResNav = [
   { enText: "About", faText: "درباره من" },
   { enText: "Twitch", faText: "توییچ" },
-  { enText: "Youtube", faText: "یوتیوب" },
+  { enText: "YouTube", faText: "یوتیوب" },
   { enText: "Social Media", faText: "شبکه های مجازی" },
   { enText: "Support", faText: "حمایت" },
 ];
@@ -92,39 +92,45 @@ const name = document.createElement("h1");
 const content = document.createElement("p");
 content.id = "about-text";
 const aboutSection = document.querySelector("#about-section");
-hello.textContent = "Hello Guys";
-hello.setAttribute("data-fa", "سلام بچه ها");
-hello.setAttribute("data-en", "Hello Guys");
-name.textContent = "My Name Is SAYEH";
-name.setAttribute("data-fa", "من سایه هستم");
-name.setAttribute("data-en", "My Name Is SAYEH");
 
-const aboutMeEN = `I'm 32 years old and I live in tehran. I studied Microbiology and I play online games casualy when i'm not busy and recently I've been playing some indie games and I really enjoyed them.
-I'm a Twitch partner and I've been streaming in Twitch for more than two years now. 
+const helloEN = "Hello Guys!";
+const helloFA = "سلام بچه ها!";
+
+hello.textContent = helloEN;
+hello.setAttribute("data-fa", helloEN);
+hello.setAttribute("data-en", helloFA);
+
+const nameEN = "My name is Sayeh.";
+const nameFA = "من سایه هستم.";
+
+name.textContent = nameEN;
+name.setAttribute("data-fa", nameFA);
+name.setAttribute("data-en", nameEN);
+
+const aboutMeEN = `I'm 32 years old and I live in tehran with my husband Hamid. I studied Microbiology and I play online games casualy when i'm not busy. I've been playing some indie games recently and I enjoyed them a lot.
+I'm a Twitch partner and I've been streaming on Twitch for more than two years now. 
 Sometimes I upload videos on YouTube. I strongly believe in creating a safe and inclusive environment for everyone in my chat.
-I promotes respect, kindness and understanding among my viewers `;
+I promotes respect, kindness and understanding among my viewers.`;
 
 const aboutMeFA =
-  "من 32 ساله هستم و در تهران زندگی میکنم. میکروبایولوژی خوانده ام و در اوقاتی که مشغول نیستم بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی از آن ها لذت بردم. من پارتنر توییچ هستم و برای بیشتر از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من به شدت به ایجاد محیطی امن و فراگیر برای همه افراد در چت خود معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
+  "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی از آن ها لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
 
 content.textContent = aboutMeEN;
 content.setAttribute("data-fa", aboutMeFA);
 content.setAttribute("data-en", aboutMeEN);
+
 aboutSection.append(hello, name, content);
 
 ///import favorites games about section
 const favGames = document.getElementById("fav-games");
 const favGamesTitle = document.createElement("p");
 
-favGamesTitle.textContent = "These are the games I usually play in stream";
-favGamesTitle.setAttribute(
-  "data-fa",
-  " بازی هایی  که من معمولاً در استریم بازی می کنم"
-);
-favGamesTitle.setAttribute(
-  "data-en",
-  "These are the games I usually play in stream"
-);
+const favGameTitleEN = "These are the games I usually play in stream:";
+const favGameTitleFA = "این ها بازی هایی هستند که معمولا در استریم بازی میکنم:";
+
+favGamesTitle.textContent = favGameTitleEN;
+favGamesTitle.setAttribute("data-fa", favGameTitleFA);
+favGamesTitle.setAttribute("data-en", favGameTitleEN);
 favGamesTitle.id = "fav-games-title";
 
 const favGamesImgData = [
@@ -166,7 +172,7 @@ const sociaMediaData = [
     imgLink: "/Images/social media icons/telegram.svg",
   },
   {
-    name: "Youtube",
+    name: "YouTube",
     link: "https://www.youtube.com/@Say3h",
     imgLink: "/Images/social media icons/youtube.svg",
   },
@@ -278,7 +284,7 @@ const footerSocialData = [
     srcLink: "https://kick.com/sayeh",
   },
   {
-    name: "Youtube",
+    name: "YouTube",
     imgLink: "/Images/footer socialmedia icons/youtube.svg",
     srcLink: "https://www.youtube.com/@Say3h",
   },
