@@ -12,8 +12,8 @@ logoImg.alt = "sayeh-website-logo";
 
 logoLink.appendChild(logoImg);
 leftNav.appendChild(logoLink);
-///import main menu navbar section
 
+///import main menu navbar section
 const menuItemsData = [
   { enText: "About", faText: "درباره من" },
   { enText: "Twitch", faText: "توییچ" },
@@ -38,77 +38,7 @@ for (let items of menuItemsData) {
   mainMenu.appendChild(li);
 }
 leftNav.appendChild(mainMenu);
-////dark mode
-const dark = document.getElementById("dark");
-const light = document.getElementById("light");
 
-const resDark = document.getElementById("res-dark");
-const resLight = document.getElementById("res-light");
-
-const isDarkModeCached = localStorage.getItem("dark-mode");
-
-if (isDarkModeCached === "true") {
-  dark.style.display = "none";
-  light.style.display = "block";
-  resDark.style.display = "none";
-  resLight.style.display = "block";
-
-  enableDarkMode();
-}
-
-dark.addEventListener("click", function () {
-  this.style.display = "none";
-  light.style.display = "block";
-  resDark.style.display = "none";
-  resLight.style.display = "block";
-
-  enableDarkMode();
-  saveDarkModeState(true);
-});
-
-light.addEventListener("click", function () {
-  dark.style.display = "block";
-  this.style.display = "none";
-  resDark.style.display = "block";
-  resLight.style.display = "none";
-
-  disableDarkMode();
-  saveDarkModeState(false);
-});
-
-resDark.addEventListener("click", function () {
-  dark.style.display = "none";
-  light.style.display = "block";
-  this.style.display = "none";
-  resLight.style.display = "block";
-
-  enableDarkMode();
-  saveDarkModeState(true);
-});
-
-resLight.addEventListener("click", function () {
-  dark.style.display = "block";
-  light.style.display = "none";
-  resDark.style.display = "block";
-  this.style.display = "none";
-
-  disableDarkMode();
-  saveDarkModeState(false);
-});
-
-function enableDarkMode() {
-  let element = document.body;
-  element.classList.add("dark-mode");
-}
-
-function disableDarkMode() {
-  let element = document.body;
-  element.classList.remove("dark-mode");
-}
-
-function saveDarkModeState(isDarkModeEnabled) {
-  localStorage.setItem("dark-mode", isDarkModeEnabled);
-}
 ///////////////////////////responsive navbar
 const menuItemsResNav = [
   { enText: "About", faText: "درباره من" },
@@ -117,7 +47,7 @@ const menuItemsResNav = [
   { enText: "Social Media", faText: "شبکه های مجازی" },
   { enText: "Support", faText: "حمایت" },
 ];
-// const menuItemsResNav = ["About", "Twitch", "Youtube", "Social Meida", "Support"];
+
 const resNav = document.getElementById("responsive-nav");
 const resNavMain = document.getElementById("responsive-nav-main");
 const revNavUl = document.createElement("ul");
@@ -155,6 +85,7 @@ const profileImg = document.createElement("img");
 profileImg.src = "/Images/about images/profile.png";
 profileImg.alt = "sayeh-profile";
 imgContainer.appendChild(profileImg);
+
 ///import sayeh profile text about section
 const hello = document.createElement("h1");
 const name = document.createElement("h1");
@@ -180,6 +111,7 @@ content.textContent = aboutMeEN;
 content.setAttribute("data-fa", aboutMeFA);
 content.setAttribute("data-en", aboutMeEN);
 aboutSection.append(hello, name, content);
+
 ///import favorites games about section
 const favGames = document.getElementById("fav-games");
 const favGamesTitle = document.createElement("p");
@@ -210,237 +142,6 @@ for (let images of favGamesImgData) {
   faveGamesImgContainer.innerHTML += `<img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}" class="col-md-4 col-sm-10 col-10 mt-4">`;
 }
 favGames.append(favGamesTitle, faveGamesImgContainer);
-
-const streamIsLive = localStorage.getItem("streamIsLive");
-const streamAlertEN = localStorage.getItem("streamAlertEN");
-const streamAlertFA = localStorage.getItem("streamAlertFA");
-const streamTitle = localStorage.getItem("streamTitle");
-const streamView = localStorage.getItem("streamView");
-const streamCategory = localStorage.getItem("streamCategory");
-const streamThumbnail = localStorage.getItem("streamThumbnail");
-
-const twitchTitlesData = [
-  streamAlertEN,
-  streamAlertFA,
-  streamTitle,
-  "Streaming ",
-  " Viewers : ",
-  streamThumbnail,
-];
-const twitchSpanData = [streamCategory, streamView];
-
-const twitchTitlesSection = document.getElementById("twitchTitles-section");
-const twitchAlert = document.getElementById("twitchLive-alert");
-const twitchTitle = document.getElementById("twitchLive-title");
-const twitchThumbnailLink = document.querySelector(
-  "#twitch-container #twitch-container-img"
-);
-const twitchThumbnail = document.querySelector("#twitch-container img");
-
-twitchThumbnailLink.href = "https://www.twitch.tv/sayeh";
-twitchThumbnailLink.target = "_blank";
-twitchThumbnail.src = twitchTitlesData[5];
-twitchThumbnail.alt = "twitch-live-cover";
-
-twitchAlert.textContent = twitchTitlesData[0];
-twitchAlert.setAttribute("data-en", twitchTitlesData[0]);
-twitchAlert.setAttribute("data-fa", twitchTitlesData[1]);
-
-twitchTitle.textContent = twitchTitlesData[2];
-
-///span streaming  twitch section
-const twitchLiveCategory = document.createElement("p");
-twitchLiveCategory.textContent = twitchTitlesData[3];
-
-twitchLiveCategory.id = "twitchLive-category";
-twitchTitlesSection.appendChild(twitchLiveCategory);
-const twitchCategory = document.createElement("span");
-twitchCategory.id = "twitch-category";
-twitchCategory.textContent = twitchSpanData[0];
-twitchLiveCategory.appendChild(twitchCategory);
-
-///span viewer count  twitch section
-const twitchLiveViewCount = document.createElement("p");
-twitchLiveViewCount.textContent = twitchTitlesData[4];
-
-twitchLiveViewCount.id = "twitchLive-view-count";
-twitchTitlesSection.appendChild(twitchLiveViewCount);
-const viewercount = document.createElement("span");
-viewercount.id = "viewer-count";
-viewercount.textContent = twitchSpanData[1];
-twitchLiveViewCount.appendChild(viewercount);
-
-///span twitch link  twitch section
-const twitchLink = document.createElement("a");
-twitchLink.textContent = "Go To Twitch";
-twitchLink.setAttribute("data-en", "Go To Twitch");
-twitchLink.setAttribute("data-fa", "برو به توییچ");
-twitchLink.href = "https://www.twitch.tv/sayeh";
-twitchLink.target = "blank";
-twitchTitlesSection.appendChild(twitchLink);
-
-if (streamIsLive === "false") {
-  twitchLiveCategory.style.display = "none";
-  twitchLiveViewCount.style.display = "none";
-}
-
-/////////////import yt covers
-const videoFirstTitle = localStorage.getItem("videoFirstTitle");
-const videoFirstUrl = localStorage.getItem("videoFirstUrl");
-const vidoeFirstThumbnail = localStorage.getItem("vidoeFirstThumbnail");
-const videoSecondTitle = localStorage.getItem("videoSecondTitle");
-const videoSecondUrl = localStorage.getItem("videoSecondUrl");
-const videoSecondThumbnail = localStorage.getItem("videoSecondThumbnail");
-const videoThirdTitle = localStorage.getItem("videoThirdTitle");
-const videoThirdUrl = localStorage.getItem("videoThirdUrl");
-const videoThirdThumbnail = localStorage.getItem("videoThirdThumbnail");
-
-const ytCoversData = [
-  {
-    title: videoFirstTitle,
-    imgLinks: vidoeFirstThumbnail,
-    id: 1,
-    link: videoFirstUrl,
-  },
-  {
-    title: videoSecondTitle,
-    imgLinks: videoSecondThumbnail,
-    id: 2,
-    link: videoSecondUrl,
-  },
-  {
-    title: videoThirdTitle,
-    imgLinks: videoThirdThumbnail,
-    id: 3,
-    link: videoThirdUrl,
-  },
-];
-
-const ytContainer = document.getElementById("yt-container");
-
-for (let coverItems of ytCoversData) {
-  ytContainer.innerHTML += `
-               <div class="col-lg-4 col-md-6 col-12 ytCovers-container">
-                   <a href="${coverItems.link}" target="_blank">
-                   <div class="ytCovers-img-container">
-                   <img src="${coverItems.imgLinks}" alt="">
-                   </div>
-                           
-                             <p style="text-align: center;">${coverItems.title}</p>
-                   </a>
-               </div>`;
-}
-
-// fetch("./json/stream.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const twitchTitlesData = [
-//       data.alertEN,
-//       data.alertFA,
-//       data.title,
-//       "Streaming ",
-//       " Viewers : ",
-//       data.thumbnail,
-//     ];
-//     const twitchSpanData = [data.category, data.view];
-
-//     const twitchTitlesSection = document.getElementById("twitchTitles-section");
-//     const twitchAlert = document.getElementById("twitchLive-alert");
-//     const twitchTitle = document.getElementById("twitchLive-title");
-//     const twitchThumbnailLink = document.querySelector("#twitch-container #twitch-container-img");
-//     const twitchThumbnail = document.querySelector("#twitch-container img");
-
-//     twitchThumbnailLink.href = "https://www.twitch.tv/sayeh";
-//     twitchThumbnailLink.target = "_blank";
-//     twitchThumbnail.src = twitchTitlesData[5];
-//     twitchThumbnail.alt = "twitch-live-cover";
-
-//     twitchAlert.textContent = twitchTitlesData[0];
-
-//     if (localStorage.getItem("lang") === "en") {
-//       twitchAlert.setAttribute("data-en", twitchTitlesData[0]);
-//     } else {
-//       twitchAlert.setAttribute("data-fa", twitchTitlesData[1]);
-//     }
-
-//     twitchTitle.textContent = twitchTitlesData[2];
-//     ///span streaming  twitch section
-//     const twitchLiveCategory = document.createElement("p");
-//     twitchLiveCategory.textContent = twitchTitlesData[3];
-
-//     twitchLiveCategory.id = "twitchLive-category";
-//     twitchTitlesSection.appendChild(twitchLiveCategory);
-//     const twitchCategory = document.createElement("span");
-//     twitchCategory.id = "twitch-category";
-//     twitchCategory.textContent = twitchSpanData[0];
-//     twitchLiveCategory.appendChild(twitchCategory);
-//     ///span viewer count  twitch section
-//     const twitchLiveViewCount = document.createElement("p");
-//     twitchLiveViewCount.textContent = twitchTitlesData[4];
-
-//     twitchLiveViewCount.id = "twitchLive-view-count";
-//     twitchTitlesSection.appendChild(twitchLiveViewCount);
-//     const viewercount = document.createElement("span");
-//     viewercount.id = "viewer-count";
-//     viewercount.textContent = twitchSpanData[1];
-//     twitchLiveViewCount.appendChild(viewercount);
-//     ///span twitch link  twitch section
-//     const twitchLink = document.createElement("a");
-//     twitchLink.textContent = "Go To Twitch";
-//     twitchLink.setAttribute("data-en", "Go To Twitch");
-//     twitchLink.setAttribute("data-fa", "برو به توییچ");
-//     twitchLink.href = "https://www.twitch.tv/sayeh";
-//     twitchLink.target = "blank";
-//     twitchTitlesSection.appendChild(twitchLink);
-
-//     if (!data.isLive) {
-//       twitchLiveCategory.style.display = "none";
-//       twitchLiveViewCount.style.display = "none";
-//     }
-//   })
-//   .catch((error) => console.error);
-
-// /////////////import yt covers
-// fetch("./json/video.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const ytCoversData = [
-//       {
-//         title: data.firstTitle,
-//         imgLinks: data.firstThumbnail,
-//         id: 1,
-//         link: data.firstUrl,
-//       },
-//       {
-//         title: data.secondTitle,
-//         imgLinks: data.secondThumbnail,
-//         id: 2,
-//         link: data.secondUrl,
-//       },
-//       {
-//         title: data.thirdTitle,
-//         imgLinks: data.thirdThumbnail,
-//         id: 3,
-//         link: data.thirdUrl,
-//       },
-//     ];
-
-//     const ytContainer = document.getElementById("yt-container");
-
-//     for (let coverItems of ytCoversData) {
-//       ytContainer.innerHTML += `
-//                <div class="col-lg-4 col-md-6 col-12 ytCovers-container">
-//                    <a href="${coverItems.link}" target="_blank">
-//                    <div class="ytCovers-img-container">
-//                    <img src="${coverItems.imgLinks}" alt="">
-//                    </div>
-                           
-//                              <p style="text-align: center;">${coverItems.title}</p>
-//                    </a>
-//                </div>`;
-//     }
-//   })
-//   .catch((error) => console.error);
 
 ////////////import social media
 const sociaMediaData = [
@@ -486,6 +187,7 @@ for (let sMediaItem of sociaMediaData) {
           <p>${sMediaItem.name}</p>
     </a>`;
 }
+
 ////////////import support staff
 const supportDonateData = [
   {
@@ -547,6 +249,7 @@ footerLogoImg.alt = "sayeh-logo-footer";
 footerLogoImg.setAttribute("width", "140");
 footerLogoImg.setAttribute("height", "100");
 footerLogoLink.appendChild(footerLogoImg);
+
 ///footer social media
 const footerSocialData = [
   {
@@ -589,6 +292,7 @@ for (let footerSocialItems of footerSocialData) {
      </li>
        `;
 }
+
 ///footer support
 const footerSupportlData = [
   {
@@ -625,8 +329,8 @@ for (let footerSupportItems of footerSupportlData) {
      </li>
        `;
 }
-///footer copyright
 
+///footer copyright
 const copyRight = document.getElementById("copyRight");
 
 const copyRightText = document.createElement("p");
@@ -635,14 +339,10 @@ const d = new Date();
 const thisYear = d.getFullYear();
 copyRightText.textContent = `© 2023-${thisYear} Sayeh Website All Rights Reserved`;
 copyRight.appendChild(copyRightText);
-/////rocket
 
+/////rocket
 const rocket = document.getElementById("rocket-scroll");
 
-// const windowScrollHeight = window.scrollY;
-// if (windowScrollHeight > 500) {
-//     console.log("hi")
-// }
 window.addEventListener("scroll", function () {
   if (this.window.scrollY > 400) {
     rocket.style.display = "block";
@@ -656,28 +356,3 @@ rocket.addEventListener("click", function (e) {
     window.scrollTo(0, 0);
   }, 100);
 });
-/////////language
-// const lang = {
-//     fa: {
-//         menu: ["درباره من", "توییچ", "یوتیوب", "شبکه های مجازی", "حمایت"],
-//         titles: ["درباره من", "توییچ", "یوتیوب", "شبکه های مجازی", "حمایت"]
-//     }
-// }
-
-// const langFaBtn = document.getElementById("lang-fa-icon");
-// const langEnBtn = document.getElementById("lang-en-icon");
-
-// const aboutTitle = document.getElementById("about-title");
-// const aboutH1 = document.querySelector("#about-section h1");
-// const title = document.querySelectorAll(".title");
-// console.log(title)
-// langFaBtn.addEventListener("click", function () {
-//     title.forEach(function (items) {
-//         items.innerHTML = `<i class="fa-regular fa-user mx-2"></i> ${lang.fa.titles[0]}`;
-//         window.style.direction="rtl"
-//     })
-// });
-
-// langEnBtn.addEventListener("click", function () {
-//     aboutTitle.innerHTML = `<i class="fa-regular fa-user mx-2"></i> About`
-// })
