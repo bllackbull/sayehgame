@@ -10,7 +10,7 @@ const copyright = document.getElementById("copyRight");
 
 let lang = localStorage.getItem("lang");
 
-if (lang === "en") {
+if (lang === "en" || !lang) {
   en.style.display = "none";
   fa.style.display = "block";
   resEn.style.display = "none";
@@ -21,7 +21,7 @@ if (lang === "en") {
   aboutBorderFa.style.borderLeft = "4px solid #662D91";
   aboutBorderFa.style.borderRight = "none";
 
-} else {
+} else if (lang === "fa") {
   en.style.display = "block";
   fa.style.display = "none";
   resEn.style.display = "block";
