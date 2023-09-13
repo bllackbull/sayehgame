@@ -3,7 +3,7 @@ const leftNav = document.getElementById("left-nav");
 const logoLink = document.createElement("a");
 const logoImg = document.createElement("img");
 
-logoLink.href = "http://127.0.0.1:5500/index.html";
+logoLink.href = "https://iamblackbull.github.io";
 
 logoImg.src = "/Images/logo footer.svg";
 logoImg.width = "100";
@@ -15,7 +15,7 @@ leftNav.appendChild(logoLink);
 
 ///import main menu navbar section
 const menuItemsData = [
-  { enText: "About", faText: "درباره من" },
+  { enText: "About Me", faText: "درباره من" },
   { enText: "Twitch", faText: "توییچ" },
   { enText: "YouTube", faText: "یوتیوب" },
   { enText: "Social Media", faText: "شبکه های مجازی" },
@@ -41,7 +41,7 @@ leftNav.appendChild(mainMenu);
 
 ///////////////////////////responsive navbar
 const menuItemsResNav = [
-  { enText: "About", faText: "درباره من" },
+  { enText: "About Me", faText: "درباره من" },
   { enText: "Twitch", faText: "توییچ" },
   { enText: "YouTube", faText: "یوتیوب" },
   { enText: "Social Media", faText: "شبکه های مجازی" },
@@ -111,7 +111,6 @@ const aboutMeEN = `I'm 32 years old and I live in tehran with my husband Hamid. 
 I'm a Twitch partner and I've been streaming on Twitch for more than two years now. 
 Sometimes I upload videos on YouTube. I strongly believe in creating a safe and inclusive environment for everyone in my chat.
 I promotes respect, kindness and understanding among my viewers.`;
-
 const aboutMeFA =
   "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی از آن ها لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
 
@@ -248,7 +247,7 @@ for (let subItem of supportSubData) {
 ///////////footer
 ///footer logo
 const footerLogoLink = document.getElementById("footer-logo-link");
-footerLogoLink.href = "http://127.0.0.1:5500/index.html";
+footerLogoLink.href = "https://iamblackbull.github.io";
 const footerLogoImg = document.createElement("img");
 footerLogoImg.src = "/Images/logo footer.svg";
 footerLogoImg.alt = "sayeh-logo-footer";
@@ -337,14 +336,14 @@ for (let footerSupportItems of footerSupportlData) {
 }
 
 ///footer copyright
-const copyRight = document.getElementById("copyRight");
+const copyright = document.getElementById("copyRight");
 
-const copyRightText = document.createElement("p");
+const copyrightText = document.createElement("p");
 
 const d = new Date();
 const thisYear = d.getFullYear();
-copyRightText.textContent = `© 2023-${thisYear} Sayeh Website All Rights Reserved`;
-copyRight.appendChild(copyRightText);
+copyrightText.textContent = `© 2023-${thisYear} Sayeh Website All Rights Reserved`;
+copyright.appendChild(copyrightText);
 
 /////rocket
 const rocket = document.getElementById("rocket-scroll");
