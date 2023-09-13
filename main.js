@@ -97,8 +97,8 @@ const helloEN = "Hello Guys!";
 const helloFA = "سلام بچه ها!";
 
 hello.textContent = helloEN;
-hello.setAttribute("data-fa", helloEN);
-hello.setAttribute("data-en", helloFA);
+hello.setAttribute("data-fa", helloFA);
+hello.setAttribute("data-en", helloEN);
 
 const nameEN = "My name is Sayeh.";
 const nameFA = "من سایه هستم.";
