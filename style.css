@@ -1,6 +1,5 @@
 /******************fonts**************************/
 
-
 @font-face {
   font-family: lalezar;
   src: url(/fonts/lalezar/Lalezar-Regular.ttf);
@@ -8,6 +7,7 @@
 
 /******************CSS RESET**************************/
 * {
+  user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -125,7 +125,6 @@ nav ul li a:hover {
 }
 
 @media (max-width: 945px) {
-
   #main-menu,
   #right-nav {
     display: none;
@@ -185,7 +184,6 @@ nav ul li a:hover {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,

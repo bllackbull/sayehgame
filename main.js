@@ -144,7 +144,7 @@ faveGamesImgContainer.classList =
 faveGamesImgContainer.id = "fav-games-img-container";
 
 for (let images of favGamesImgData) {
-  faveGamesImgContainer.innerHTML += `<img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}" class="col-md-4 col-sm-10 col-4 mt-4">`;
+  faveGamesImgContainer.innerHTML += `<img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}" class="col-md-4 col-sm-10 col-10 mt-4">`;
 }
 favGames.append(favGamesTitle, faveGamesImgContainer);
 
