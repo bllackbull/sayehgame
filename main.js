@@ -124,8 +124,8 @@ aboutSection.append(hello, name, content);
 const favGames = document.getElementById("fav-games");
 const favGamesTitle = document.createElement("p");
 
-const favGameTitleEN = "These are the games I usually play in stream:";
-const favGameTitleFA = "بازی هایی که معمولا در استریم بازی میکنم:";
+const favGameTitleEN = "Some of the games I usually play in stream:";
+const favGameTitleFA = "برخی از بازی هایی که معمولا در استریم بازی میکنم:";
 
 favGamesTitle.textContent = favGameTitleEN;
 favGamesTitle.setAttribute("data-fa", favGameTitleFA);
