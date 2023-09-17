@@ -3,7 +3,7 @@ const leftNav = document.getElementById("left-nav");
 const logoLink = document.createElement("a");
 const logoImg = document.createElement("img");
 
-logoLink.href = "https://iamblackbull.github.io";
+logoLink.href = "https://sayehgame.com";
 
 logoImg.src = "/Images/logo footer.svg";
 logoImg.width = "100";
@@ -112,7 +112,7 @@ I'm a Twitch partner and I've been streaming on Twitch for more than two years n
 Sometimes I upload videos on YouTube. I strongly believe in creating a safe and inclusive environment for everyone in my chat.
 I promotes respect, kindness and understanding among my viewers.`;
 const aboutMeFA =
-  "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی از آن ها لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
+  "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی ازشون لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
 
 content.textContent = aboutMeEN;
 content.setAttribute("data-fa", aboutMeFA);
@@ -247,7 +247,7 @@ for (let subItem of supportSubData) {
 ///////////footer
 ///footer logo
 const footerLogoLink = document.getElementById("footer-logo-link");
-footerLogoLink.href = "https://iamblackbull.github.io";
+footerLogoLink.href = "https://sayehgame.com";
 const footerLogoImg = document.createElement("img");
 footerLogoImg.src = "/Images/logo footer.svg";
 footerLogoImg.alt = "sayeh-logo-footer";

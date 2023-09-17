@@ -1,204 +1,312 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6R76LWBT0C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sayeh | Streamer & YouTuber</title>
-  <meta name="description"
-    content="Explore the gaming universe with Sayeh, Streamer and YouTuber. Dive into thrilling gameplay, entertaining streams, and insightful content as Sayeh takes you on a gaming adventure like no other!" />
-  <link rel="icon" type="image/x-icon" href="/Images/icon.svg" />
-  <link rel="stylesheet" href="/assets/bootstrap/bootstrap.css" />
-  <link rel="stylesheet" href="/assets/font-awesome/all.css" />
-  <link rel="stylesheet" href="/style.css" />
-</head>
+      gtag("config", "G-6R76LWBT0C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayeh | Streamer & YouTuber</title>
+    <meta
+      name="description"
+      content="Explore the gaming universe with Sayeh, Streamer and YouTuber. Dive into thrilling gameplay, entertaining streams, and insightful content as Sayeh takes you on a gaming adventure like no other!"
+    />
+    <link rel="icon" type="image/x-icon" href="/Images/icon.svg" />
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/font-awesome/all.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-<body>
-  <div class="container-fluid">
-    <!---------------------------navbar section-------------------------->
-    <div class="row mt-4 d-flex">
-      <nav class="col-12 menu-fixed" id="nav">
-        <div id="left-nav" class="col-9"></div>
-        <div id="right-nav" class="col-3">
-          <button id="lang-en-icon" style="display: none; font-size: 28px">
-            EN
-          </button>
-          <button id="lang-fa-icon" style="font-size: 28px">FA</button>
-          <button id="dark"><i class="fa-solid fa-2x fa-moon"></i></button>
-          <button id="light" style="display: none">
-            <i class="fa-solid fa-2x fa-sun"></i>
-          </button>
-        </div>
-        <div id="mobile-nav" class="col-3">
-          <ul id="mobile-menu">
-            <li>
-              <a href="#"><i class="fa-solid fa-2x fa-bars"></i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <!---------------------------about section-------------------------->
-    <div class="row d-flex justify-content-center" id="about Me">
-      <div class="col-11 about-marginTop">
-        <div id="about-div">
-          <div>
-            <span><i style="color: #662d91" class="fa-solid fa-user fa-2x mx-2"></i></span>
-            <p style="display: inline" id="about-title" data-en="About Me" data-fa="درباره من" class="title">
-              About Me
-            </p>
+  <body>
+    <div class="container-fluid">
+      <!---------------------------navbar section-------------------------->
+      <div class="row mt-4 d-flex">
+        <nav class="col-12 menu-fixed" id="nav">
+          <div id="left-nav" class="col-9"></div>
+          <div id="right-nav" class="col-3">
+            <button id="lang-en-icon" style="display: none; font-size: 28px">
+              EN
+            </button>
+            <button id="lang-fa-icon" style="font-size: 28px">FA</button>
+            <button id="dark"><i class="fa-solid fa-2x fa-moon"></i></button>
+            <button id="light" style="display: none">
+              <i class="fa-solid fa-2x fa-sun"></i>
+            </button>
           </div>
-          <div class="row mt-4 mb-4">
-            <div class="col-lg-4 col-md-12 d-flex justify-content-center" id="profile-section">
-              <div id="img-container"></div>
-            </div>
-            <div class="col-lg-8 col-md-12 mt-md-5 mt-5" id="about-section"></div>
+          <div id="mobile-nav" class="col-3">
+            <ul id="mobile-menu">
+              <li>
+                <a href="#"><i class="fa-solid fa-2x fa-bars"></i></a>
+              </li>
+            </ul>
           </div>
-        </div>
+        </nav>
       </div>
-    </div>
-    <!---------------------------favorite games section-------------------------->
-    <div class="row d-flex justify-content-center">
-      <div class="col-11">
-        <div id="fav-games"></div>
-      </div>
-    </div>
-    <!---------------------------twitch section-------------------------->
-    <div class="row d-flex justify-content-center" id="twitch">
-      <div class="col-11 twitch-marginTop">
-        <div id="twitch-div">
-          <div>
-            <span><i style="color: #662d91" class="fa-brands fa-twitch fa-2x mx-2"></i></span>
-            <p style="display: inline" id="twitch-title" data-en="Twitch" data-fa="توییچ" class="title">
-              Twitch
-            </p>
-          </div>
-          <div class="row mt-5 d-flex justify-content-center" style="min-height: 500px;">
-            <div id="twitch-container"
-              class="col-lg-12 col-md-10 col-sm-12 d-flex justify-content-center align-items-center">
-              <div id="twitch-embed"></div>
-              <img src="/Images/Twitch failure.svg" class="col-lg-6 col-md-10 col-sm-10 col-10" alt="twitch-failure">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!---------------------------youtube section-------------------------->
-    <div class="row d-flex justify-content-center" id="youTube">
-      <div class="col-11 yt-marginTop">
-        <div id="youtube-div">
-          <div>
-            <span><i style="color: #662d91" class="fa-brands fa-youtube fa-2x mx-2"></i></span>
-            <p style="display: inline" id="yt-title" data-en="YouTube" data-fa="یوتیوب" class="title">
-              YouTube
-            </p>
-          </div>
-          <p id="yt-text" data-en="Latest videos on Sayeh's youtube page:"
-            data-fa="جدید ترین ویدیو های سایه در یوتیوب:">
-            Latest videos on Sayeh's youtube page:
-          </p>
-          <div class="row mt-5 d-flex justify-content-center" id="yt-container"></div>
-        </div>
-      </div>
-    </div>
-    <!---------------------------social media section-------------------------->
-    <div class="row d-flex justify-content-center" id="social Media">
-      <div class="col-11 sMedia-marginTop">
-        <div id="social-media">
-          <div>
-            <span><i style="color: #662d91" class="fa-solid fa-hashtag fa-2x mx-2"></i></span>
-            <p style="display: inline" id="social-media-title" data-en="Social Media" data-fa="شبکه های مجازی"
-              class="title">
-              Social Media
-            </p>
-          </div>
-          <div class="row mt-5 d-flex justify-content-center" id="social-media-container"></div>
-        </div>
-      </div>
-    </div>
-    <!---------------------------support section-------------------------->
-    <div class="row d-flex justify-content-center" id="support">
-      <div class="col-11 support-marginTop">
-        <div id="support-div">
-          <div>
-            <span><i style="color: #662d91" class="fa-solid fa-dollar-sign fa-2x mx-2"></i></span>
-            <p style="display: inline" id="support-title" data-en="Support" data-fa="حمایت" class="title">
-              Support
-            </p>
-          </div>
-          <div class="row mt-5 d-flex justify-content-center align-items-center flex-column" id="support-container">
-            <div class="col-lg-6 col-md-10 col-sm-12">
-              <p data-en=" You can donate me through links below:"
-                data-fa="شما می تونید از طریق لینک زیر از من حمایت کنید:">
-                You can donate me through links below:
+      <!---------------------------about section-------------------------->
+      <div class="row d-flex justify-content-center" id="about Me">
+        <div class="col-11 about-marginTop">
+          <div id="about-div">
+            <div>
+              <span
+                ><i
+                  style="color: #662d91"
+                  class="fa-solid fa-user fa-2x mx-2"
+                ></i
+              ></span>
+              <p
+                style="display: inline"
+                id="about-title"
+                data-en="About Me"
+                data-fa="درباره من"
+                class="title"
+              >
+                About Me
               </p>
-              <div class="row" id="support-donate-link"></div>
             </div>
-            <div class="col-lg-6 col-md-10 col-sm-12 mt-5">
-              <p data-en=" You can subscribe me on twitch through links below:"
-                data-fa="شما می توانید از طریق لینک زیر منو در توییچ ساب کنید:">
-                You can subscribe me on twitch through links below:
-              </p>
-              <div class="row" id="support-sub-link"></div>
+            <div class="row mt-4 mb-4">
+              <div
+                class="col-lg-4 col-md-12 d-flex justify-content-center"
+                id="profile-section"
+              >
+                <div id="img-container"></div>
+              </div>
+              <div
+                class="col-lg-8 col-md-12 mt-md-5 mt-5"
+                id="about-section"
+              ></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!---------------------------footer section-------------------------->
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 footer-marginTop">
-        <div id="footer">
-          <div class="row mt-5 d-flex justify-content-center align-items-center" id="footer-container">
+      <!---------------------------favorite games section-------------------------->
+      <div class="row d-flex justify-content-center">
+        <div class="col-11">
+          <div id="fav-games"></div>
+        </div>
+      </div>
+      <!---------------------------twitch section-------------------------->
+      <div class="row d-flex justify-content-center" id="twitch">
+        <div class="col-11 twitch-marginTop">
+          <div id="twitch-div">
+            <div>
+              <span
+                ><i
+                  style="color: #662d91"
+                  class="fa-brands fa-twitch fa-2x mx-2"
+                ></i
+              ></span>
+              <p
+                style="display: inline"
+                id="twitch-title"
+                data-en="Twitch"
+                data-fa="توییچ"
+                class="title"
+              >
+                Twitch
+              </p>
+            </div>
             <div
-              class="col-lg-10 col-md-10 col-12 footer-box d-flex justify-content-center align-items-center flex-column">
-              <div id="footer-logo">
-                <a id="footer-logo-link"> </a>
+              class="row mt-5 d-flex justify-content-center"
+              style="min-height: 500px"
+            >
+              <div
+                id="twitch-container"
+                class="col-lg-12 col-md-10 col-sm-12 d-flex justify-content-center align-items-center"
+              >
+                <div id="twitch-embed"></div>
+                <img
+                  src="/Images/Twitch failure.svg"
+                  class="col-lg-6 col-md-10 col-sm-10 col-10"
+                  alt="twitch-failure"
+                />
               </div>
-              <div id="footer-social">
-                <ul id="footer-social-ul"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------youtube section-------------------------->
+      <div class="row d-flex justify-content-center" id="youTube">
+        <div class="col-11 yt-marginTop">
+          <div id="youtube-div">
+            <div>
+              <span
+                ><i
+                  style="color: #662d91"
+                  class="fa-brands fa-youtube fa-2x mx-2"
+                ></i
+              ></span>
+              <p
+                style="display: inline"
+                id="yt-title"
+                data-en="YouTube"
+                data-fa="یوتیوب"
+                class="title"
+              >
+                YouTube
+              </p>
+            </div>
+            <p
+              id="yt-text"
+              data-en="Latest videos on Sayeh's youtube page:"
+              data-fa="جدید ترین ویدیو های سایه در یوتیوب:"
+            >
+              Latest videos on Sayeh's youtube page:
+            </p>
+            <div
+              class="row mt-5 d-flex justify-content-center"
+              id="yt-container"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------social media section-------------------------->
+      <div class="row d-flex justify-content-center" id="social Media">
+        <div class="col-11 sMedia-marginTop">
+          <div id="social-media">
+            <div>
+              <span
+                ><i
+                  style="color: #662d91"
+                  class="fa-solid fa-hashtag fa-2x mx-2"
+                ></i
+              ></span>
+              <p
+                style="display: inline"
+                id="social-media-title"
+                data-en="Social Media"
+                data-fa="شبکه های مجازی"
+                class="title"
+              >
+                Social Media
+              </p>
+            </div>
+            <div
+              class="row mt-5 d-flex justify-content-center"
+              id="social-media-container"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------support section-------------------------->
+      <div class="row d-flex justify-content-center" id="support">
+        <div class="col-11 support-marginTop">
+          <div id="support-div">
+            <div>
+              <span
+                ><i
+                  style="color: #662d91"
+                  class="fa-solid fa-dollar-sign fa-2x mx-2"
+                ></i
+              ></span>
+              <p
+                style="display: inline"
+                id="support-title"
+                data-en="Support"
+                data-fa="حمایت"
+                class="title"
+              >
+                Support
+              </p>
+            </div>
+            <div
+              class="row mt-5 d-flex justify-content-center align-items-center flex-column"
+              id="support-container"
+            >
+              <div class="col-lg-6 col-md-10 col-sm-12">
+                <p
+                  data-en=" You can donate me through links below:"
+                  data-fa="شما می تونید از طریق لینک زیر از من حمایت کنید:"
+                >
+                  You can donate me through links below:
+                </p>
+                <div class="row" id="support-donate-link"></div>
               </div>
-              <div id="footer-support">
-                <ul id="footer-support-ul"></ul>
+              <div class="col-lg-6 col-md-10 col-sm-12 mt-5">
+                <p
+                  data-en=" You can subscribe me on twitch through links below:"
+                  data-fa="شما می توانید از طریق لینک زیر منو در توییچ ساب کنید:"
+                >
+                  You can subscribe me on twitch through links below:
+                </p>
+                <div class="row" id="support-sub-link"></div>
               </div>
-              <div id="copyRight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------footer section-------------------------->
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 footer-marginTop">
+          <div id="footer">
+            <div
+              class="row mt-5 d-flex justify-content-center align-items-center"
+              id="footer-container"
+            >
+              <div
+                class="col-lg-10 col-md-10 col-12 footer-box d-flex justify-content-center align-items-center flex-column"
+              >
+                <div id="footer-logo">
+                  <a id="footer-logo-link"> </a>
+                </div>
+                <div id="footer-social">
+                  <ul id="footer-social-ul"></ul>
+                </div>
+                <div id="footer-support">
+                  <ul id="footer-support-ul"></ul>
+                </div>
+                <div id="copyRight"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!---------------------------rocket scroll-------------------------->
-  <div id="rocket-scroll">
-    <a>
-      <img src="/Images/rocket.gif" width="60" height="60" alt="scroll-up" />
-    </a>
-  </div>
-  <!---------------------------responsive nav-------------------------->
-  <div id="responsive-nav">
-    <div id="responsive-nav-main"></div>
-    <div id="responsive-nav-side" class="d-flex justify-content-center align-items-center">
-      <button id="lang-en-icon-res-nav" style="display: none; font-size: 28px">
-        EN
-      </button>
-      <button id="lang-fa-icon-res-nav" style="font-size: 28px">FA</button>
-      <button id="res-dark"><i class="fa-solid fa-2x fa-moon"></i></button>
-      <button id="res-light" style="display: none">
-        <i class="fa-solid fa-2x fa-sun"></i>
-      </button>
-      <button id="hide-res-nav">
-        <i class="fa-solid fa-2x fa-remove"></i>
-      </button>
+    <!---------------------------rocket scroll-------------------------->
+    <div id="rocket-scroll">
+      <a>
+        <img src="/Images/rocket.gif" width="60" height="60" alt="scroll-up" />
+      </a>
     </div>
-  </div>
-  <script src="/assets/bootstrap/bootstrap.js"></script>
-  <script src="/assets/font-awesome/all.js"></script>
-  <script type="module" src="/main.js"></script>
-  <script type="module" src="/lang.js"></script>
-  <script type="module" src="/dark.js"></script>
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
-  <script type="module" src="/embedTwitch.js"></script>
-  <script type="module" src="/youtube.js"></script>
-</body>
-
+    <!---------------------------responsive nav-------------------------->
+    <div id="responsive-nav">
+      <div id="responsive-nav-main"></div>
+      <div
+        id="responsive-nav-side"
+        class="d-flex justify-content-center align-items-center"
+      >
+        <button
+          id="lang-en-icon-res-nav"
+          style="display: none; font-size: 28px"
+        >
+          EN
+        </button>
+        <button id="lang-fa-icon-res-nav" style="font-size: 28px">FA</button>
+        <button id="res-dark"><i class="fa-solid fa-2x fa-moon"></i></button>
+        <button id="res-light" style="display: none">
+          <i class="fa-solid fa-2x fa-sun"></i>
+        </button>
+        <button id="hide-res-nav">
+          <i class="fa-solid fa-2x fa-remove"></i>
+        </button>
+      </div>
+    </div>
+    <script src="/assets/bootstrap/bootstrap.js"></script>
+    <script src="/assets/font-awesome/all.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/lang.js"></script>
+    <script type="module" src="/dark.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="module" src="/embedTwitch.js"></script>
+    <script type="module" src="/youtube.js"></script>
+  </body>
 </html>
