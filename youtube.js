@@ -42,4 +42,4 @@ fetch(url)
                </div>`;
     }
   })
-  .catch((error) => console.error);
+  .catch((error) => console.error(error));
