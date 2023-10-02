@@ -265,7 +265,7 @@ const footerSocialData = [
   {
     name: "Instagram",
     imgLink: "/Images/footer socialmedia icons/instagram.svg",
-    srcLink: "https:/www.instagram.com/sayeh_game",
+    srcLink: "https://www.instagram.com/sayeh_game",
   },
   {
     name: "Telegram",
