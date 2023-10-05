@@ -587,6 +587,7 @@ nav ul li a:hover {
   z-index: 998;
   display: none;
   transition: all ease-in-out 300ms;
+  cursor: pointer;
 }
 
 #rocket-scroll:hover {
