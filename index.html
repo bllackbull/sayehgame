@@ -24,11 +24,15 @@
     <link rel="icon" type="image/x-icon" href="/Images/icon.svg" />
     <link rel="stylesheet" href="/assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="/assets/font-awesome/all.css" />
+    <link rel="stylesheet" href="/assets/slider/owl.carousel.css" />
     <link rel="stylesheet" href="/style.css" />
     <script>
-      if (location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
-          location.replace(`https://sayehgame.com`);
-      }
+      // if (
+      //   location.protocol !== "https:" &&
+      //   window.location.hostname !== "localhost"
+      // ) {
+      //   location.replace(`https://sayehgame.com`);
+      // }
     </script>
   </head>
 
@@ -96,7 +100,10 @@
       <!---------------------------favorite games section-------------------------->
       <div class="row d-flex justify-content-center">
         <div class="col-11">
-          <div id="fav-games"></div>
+          <div id="fav-games">
+            <div class="text"></div>
+            <div class="owl-carousel owl-theme"></div>
+          </div>
         </div>
       </div>
       <!---------------------------twitch section-------------------------->
@@ -307,6 +314,8 @@
     </div>
     <script src="/assets/bootstrap/bootstrap.js"></script>
     <script src="/assets/font-awesome/all.js"></script>
+    <script src="/assets/slider/jquery-3.7.1.js"></script>
+    <script src="/assets/slider/owl.carousel.js"></script>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/lang.js"></script>
     <script type="module" src="/dark.js"></script>

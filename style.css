@@ -237,6 +237,10 @@ nav ul li a:hover {
   font-size: 25px;
 }
 
+.owl-item {
+  border: none;
+}
+
 /******************twitch**************************/
 .twitch-marginTop {
   margin-top: 90px;

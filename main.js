@@ -107,12 +107,12 @@ name.textContent = nameEN;
 name.setAttribute("data-fa", nameFA);
 name.setAttribute("data-en", nameEN);
 
-const aboutMeEN = `I'm 32 years old and I live in tehran with my husband Hamid. I studied Microbiology and I play online games casualy when i'm not busy. I've been playing some indie games recently and I enjoyed them a lot.
+const aboutMeEN = `I'm 32 years old and I live in Tehran with my husband Hamid. I studied Microbiology and I casualy play online games when i'm not busy. I've been playing some indie games recently and I enjoyed them a lot.
 I'm a Twitch partner and I've been streaming on Twitch for more than two years now. 
-Sometimes I upload videos on YouTube. I strongly believe in creating a safe and inclusive environment for everyone in my chat.
-I promotes respect, kindness and understanding among my viewers.`;
+I upload videos on YouTube, too. I strongly believe in creating a safe and inclusive environment for everyone in my chat.
+I promote respect, kindness and understanding among my viewers.`;
 const aboutMeFA =
-  "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی ازشون لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم. گاهی اوقات در یوتیوب ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
+  "من 32 ساله هستم و با همسرم حمید در تهران زندگی میکنم. میکروبایولوژی خوندم و بازی آنلاین میکنم و اخیرا چند بازی مستقل بازی کردم که خیلی ازشون لذت بردم. من پارتنر توییچ هستم و برای بیش از دو ساله که در توییچ استریم میکنم.در یوتیوب هم ویدیو آپلود میکنم. من شدیدا به ایجاد محیطی امن و فراگیر برای همه افراد در چت معتقد هستم. من احترام، مهربانی و تفاهم را در بین بینندگانم ترویج میکنم.";
 
 content.textContent = aboutMeEN;
 content.setAttribute("data-fa", aboutMeFA);
@@ -121,20 +121,41 @@ content.setAttribute("data-en", aboutMeEN);
 aboutSection.append(hello, name, content);
 
 ///import favorites games about section
-const favGames = document.getElementById("fav-games");
+const favText = document.querySelector(".text");
 const favGamesTitle = document.createElement("p");
 
-const favGameTitleEN = "Some of the games I usually play in stream:";
-const favGameTitleFA = "برخی از بازی هایی که معمولا در استریم بازی میکنم:";
+const favGameTitleEN = "These are my favorite games:";
+const favGameTitleFA = "گیم های مورد علاقه من:";
 
 favGamesTitle.textContent = favGameTitleEN;
 favGamesTitle.setAttribute("data-fa", favGameTitleFA);
 favGamesTitle.setAttribute("data-en", favGameTitleEN);
 favGamesTitle.id = "fav-games-title";
+favText.appendChild(favGamesTitle);
 
 const favGamesImgData = [
+  { name: "apex", src: "/Images/favorites game images", alt: "apex" },
+  { name: "arise", src: "/Images/favorites game images", alt: "arise" },
+  { name: "darq", src: "/Images/favorites game images", alt: "darq" },
+  { name: "eafc", src: "/Images/favorites game images", alt: "eafc" },
+  { name: "journey", src: "/Images/favorites game images", alt: "journey" },
+  {
+    name: "last day of june",
+    src: "/Images/favorites game images",
+    alt: "last day of june",
+  },
   { name: "overwatch", src: "/Images/favorites game images", alt: "overwatch" },
+  {
+    name: "street fighter",
+    src: "/Images/favorites game images",
+    alt: "street fighter",
+  },
   { name: "valorant", src: "/Images/favorites game images", alt: "valorant" },
+  {
+    name: "wobbly life",
+    src: "/Images/favorites game images",
+    alt: "wobbly life",
+  },
   { name: "wow", src: "/Images/favorites game images", alt: "wow" },
 ];
 
@@ -143,10 +164,36 @@ faveGamesImgContainer.classList =
   "row d-flex justify-content-center align-items-center";
 faveGamesImgContainer.id = "fav-games-img-container";
 
+const owl = document.querySelector(".owl-carousel");
 for (let images of favGamesImgData) {
-  faveGamesImgContainer.innerHTML += `<img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}" class="col-md-4 col-sm-10 col-10 mt-4">`;
+  owl.innerHTML += `  <div class="item">
+  <img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}">
+  </div>`;
 }
-favGames.append(favGamesTitle, faveGamesImgContainer);
+// favGames.append(favGamesTitle, faveGamesImgContainer);
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  rtl: true,
+  nav: false,
+  dots: false,
+  border: false,
+  outline: false,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    650: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
 
 ////////////import social media
 const sociaMediaData = [
