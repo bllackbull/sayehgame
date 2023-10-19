@@ -124,7 +124,7 @@ aboutSection.append(hello, name, content);
 const favText = document.querySelector(".text");
 const favGamesTitle = document.createElement("p");
 
-const favGameTitleEN = "These are my favorite games:";
+const favGameTitleEN = "My favorite games:";
 const favGameTitleFA = "گیم های مورد علاقه من:";
 
 favGamesTitle.textContent = favGameTitleEN;
@@ -138,6 +138,7 @@ const favGamesImgData = [
   { name: "arise", src: "/Images/favorites game images", alt: "arise" },
   { name: "darq", src: "/Images/favorites game images", alt: "darq" },
   { name: "eafc", src: "/Images/favorites game images", alt: "eafc" },
+  { name: "fall guys", src: "/Images/favorites game images", alt: "fall guys" },
   { name: "journey", src: "/Images/favorites game images", alt: "journey" },
   {
     name: "last day of june",
@@ -170,7 +171,7 @@ for (let images of favGamesImgData) {
   <img src="/Images/favorites game images/${images.name}.png" alt="${images.alt}">
   </div>`;
 }
-// favGames.append(favGamesTitle, faveGamesImgContainer);
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -180,7 +181,7 @@ $(".owl-carousel").owlCarousel({
   border: false,
   outline: false,
   autoplay: true,
-  autoplayTimeout: 2000,
+  autoplayTimeout: 3000,
   responsiveClass: true,
   responsive: {
     0: {
