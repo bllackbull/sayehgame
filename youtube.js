@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyD_pVhcVsck4FUgYB6bheEofvVmVTBd0AI";
+const apiKey = "AIzaSyD4uvaAqLkxw1xYdRrrMaceqO_WuTdK8Q8";
 const channelId = "UCRyvm_KWqZxQio5EOES5NQw";
 
 const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=10`;
